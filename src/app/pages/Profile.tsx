@@ -42,27 +42,6 @@ export function Profile() {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        {/* History */}
-        <section className="mb-12">
-          <Card>
-            <CardHeader>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <History className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-2xl">Sejarah Dusun</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="prose max-w-none">
-              {villageInfo?.history
-                ? villageInfo.history.split('\n\n').map((paragraph, index) => (
-                    <p key={index} className="mb-4 leading-relaxed text-foreground">{paragraph}</p>
-                  ))
-                : <p className="text-muted-foreground">Belum ada data sejarah. Tambahkan melalui panel admin.</p>
-              }
-            </CardContent>
-          </Card>
-        </section>
 
         {/* Vision & Mission */}
         <section className="mb-12">

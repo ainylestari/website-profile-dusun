@@ -1,42 +1,63 @@
 import { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Button } from '../components/ui/button';
 import { Label } from '../components/ui/label';
-import { MapPin, Phone, Mail, Clock, Loader2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Loader2, CheckCircle2 } from 'lucide-react';
 import { getVillageInfo } from '../lib/data';
 import type { VillageInfo } from '../lib/data';
 import { toast } from 'sonner';
 
+const EMAILJS_SERVICE_ID = 'service_e8yrhfb';
+const EMAILJS_TEMPLATE_ID = 'template_1hpcbo8';
+const EMAILJS_PUBLIC_KEY = 'Pm7eNhIDK0fwDca-n';
+
 export function Contact() {
   const [villageInfo, setVillageInfo] = useState<VillageInfo | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: '', email: '', subject: '', message: ''
   });
 
   useEffect(() => {
-    const loadData = async () => {
-      setIsLoading(true);
-      const info = await getVillageInfo();
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+    getVillageInfo().then(info => {
       setVillageInfo(info);
       setIsLoading(false);
-    };
-    loadData();
+    });
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Pesan Anda telah terkirim! Kami akan segera menghubungi Anda.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSending(true);
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      });
+
+      setIsSent(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      toast.success('Pesan berhasil terkirim!');
+
+      // Reset status setelah 5 detik
+      setTimeout(() => setIsSent(false), 5000);
+    } catch (err) {
+      toast.error('Gagal mengirim pesan. Periksa koneksi internet kamu.');
+    }
+
+    setIsSending(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   if (isLoading) {
@@ -49,7 +70,6 @@ export function Contact() {
 
   return (
     <div className="min-h-screen">
-      {/* Page Header */}
       <div className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">Kontak Kami</h1>
@@ -59,36 +79,50 @@ export function Contact() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Contact Form */}
+
+          {/* Form */}
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl">Kirim Pesan</CardTitle>
               <CardDescription>Isi formulir di bawah ini dan kami akan menghubungi Anda secepatnya</CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Label htmlFor="name">Nama Lengkap</Label>
-                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Masukkan nama lengkap" required />
+              {isSent ? (
+                <div className="flex flex-col items-center justify-center py-12 gap-4 text-center">
+                  <CheckCircle2 className="h-16 w-16 text-green-500" />
+                  <h3 className="text-xl font-bold">Pesan Terkirim!</h3>
+                  <p className="text-muted-foreground">Terima kasih telah menghubungi kami. Kami akan segera membalas pesan Anda.</p>
+                  <Button variant="outline" onClick={() => setIsSent(false)}>Kirim Pesan Lagi</Button>
                 </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="nama@email.com" required />
-                </div>
-                <div>
-                  <Label htmlFor="subject">Subjek</Label>
-                  <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Subjek pesan" required />
-                </div>
-                <div>
-                  <Label htmlFor="message">Pesan</Label>
-                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tulis pesan Anda di sini..." rows={6} required />
-                </div>
-                <Button type="submit" className="w-full">Kirim Pesan</Button>
-              </form>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <Label htmlFor="name">Nama Lengkap</Label>
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Masukkan nama lengkap" required disabled={isSending} />
+                  </div>
+                  <div>
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="nama@email.com" required disabled={isSending} />
+                  </div>
+                  <div>
+                    <Label htmlFor="subject">Subjek</Label>
+                    <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Subjek pesan" required disabled={isSending} />
+                  </div>
+                  <div>
+                    <Label htmlFor="message">Pesan</Label>
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tulis pesan Anda di sini..." rows={6} required disabled={isSending} />
+                  </div>
+                  <Button type="submit" className="w-full" disabled={isSending}>
+                    {isSending ? (
+                      <><Loader2 className="h-4 w-4 mr-2 animate-spin" />Mengirim...</>
+                    ) : 'Kirim Pesan'}
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
+          {/* Info Kontak */}
           <div className="space-y-6">
             <Card>
               <CardHeader>
@@ -152,13 +186,13 @@ export function Contact() {
               <CardContent className="p-6">
                 <h3 className="font-bold text-lg mb-2">Kepala Dusun</h3>
                 <p className="text-xl mb-1">{villageInfo?.headOfHamlet || '-'}</p>
-                <p className="opacity-90">Dusun Sukamaju</p>
+                <p className="opacity-90">{villageInfo?.name || 'Dusun Sukamaju'}</p>
               </CardContent>
             </Card>
           </div>
         </div>
 
-        {/* Map */}
+        {/* Peta */}
         <Card>
           <CardHeader>
             <CardTitle className="text-2xl">Lokasi</CardTitle>
@@ -175,7 +209,7 @@ export function Contact() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lokasi Dusun Ngrancah"
+                  title="Lokasi Dusun"
                 />
               </div>
             ) : (

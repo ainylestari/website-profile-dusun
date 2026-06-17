@@ -49,6 +49,7 @@ export function Potential() {
             <TabsTrigger value="umkm">UMKM</TabsTrigger>
             <TabsTrigger value="agriculture">Pertanian</TabsTrigger>
             <TabsTrigger value="tourism">Wisata</TabsTrigger>
+            {/*<TabsTrigger value="livestock">Peternakan</TabsTrigger>*/}
           </TabsList>
 
           {/* UMKM Tab */}
@@ -219,7 +220,6 @@ export function Potential() {
                 <div className="flex flex-wrap gap-4 justify-center">
                   {[
                     ['Jam Buka', '24 Jam'],
-                    ['Tiket Masuk', 'Gratis - Rp 10.000'],
                     ['Akses', 'Mudah Dijangkau'],
                   ].map(([label, value]) => (
                     <div key={label} className="bg-white/10 rounded-lg px-6 py-3">
@@ -231,6 +231,101 @@ export function Potential() {
               </CardContent>
             </Card>
           </TabsContent>
+          {/*
+          <TabsContent value="livestock">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-primary mb-2">Peternakan</h2>
+              <p className="text-muted-foreground">Hasil peternakan yang menjadi salah satu sumber penghasilan masyarakat Dusun Ngrancah</p>
+            </div>
+          
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  emoji: '🐄',
+                  color: 'primary',
+                  title: 'Sapi',
+                  desc: 'Peternakan sapi potong dan sapi perah yang dikelola warga secara mandiri',
+                  stats: [['Jumlah Ternak', '±120 ekor'], ['Peternak', '35 KK'], ['Hasil', 'Daging & Susu']],
+                },
+                {
+                  emoji: '🐐',
+                  color: 'secondary',
+                  title: 'Kambing & Domba',
+                  desc: 'Kambing dan domba dipelihara sebagai tabungan hidup dan untuk kebutuhan hari raya',
+                  stats: [['Jumlah Ternak', '±250 ekor'], ['Peternak', '48 KK'], ['Hasil', 'Daging & Kulit']],
+                },
+                {
+                  emoji: '🐓',
+                  color: 'chart-3',
+                  title: 'Unggas',
+                  desc: 'Ayam kampung dan itik dipelihara hampir di setiap rumah tangga sebagai sumber protein',
+                  stats: [['Jumlah Ternak', '±1.500 ekor'], ['Peternak', '80+ KK'], ['Hasil', 'Telur & Daging']],
+                },
+              ].map(({ emoji, color, title, desc, stats }) => (
+                <Card key={title}>
+                  <CardHeader>
+                    <div className={`w-16 h-16 bg-${color}/10 rounded-full flex items-center justify-center mb-4 text-3xl`}>
+                      {emoji}
+                    </div>
+                    <CardTitle>{title}</CardTitle>
+                    <CardDescription>{desc}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2 text-sm">
+                      {stats.map(([label, value]) => (
+                        <div key={label} className="flex justify-between">
+                          <span className="text-muted-foreground">{label}</span>
+                          <span className="font-medium">{value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          
+            <Card className="mt-6 bg-muted/50">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-2xl">
+                    🌿
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Pola Peternakan Terpadu</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Masyarakat Dusun Ngrancah menerapkan pola peternakan terpadu yang memanfaatkan
+                      limbah pertanian sebagai pakan ternak, dan kotoran ternak sebagai pupuk organik
+                      untuk lahan pertanian. Sistem ini menjaga keseimbangan ekosistem sekaligus
+                      meningkatkan pendapatan warga.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          
+            <Card className="mt-6 bg-primary text-primary-foreground">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold mb-4">Potensi Peternakan Dusun Ngrancah</h3>
+                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+                  Sektor peternakan menjadi salah satu pilar ekonomi masyarakat yang terus
+                  berkembang dengan dukungan lahan hijau yang luas dan sumber pakan yang melimpah.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  {[
+                    ['Total Peternak', '160+ KK'],
+                    ['Jenis Ternak', '3+ Jenis'],
+                    ['Sistem', 'Terpadu'],
+                  ].map(([label, value]) => (
+                    <div key={label} className="bg-white/10 rounded-lg px-6 py-3">
+                      <p className="text-sm opacity-90">{label}</p>
+                      <p className="font-bold text-lg">{value}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+           */}
         </Tabs>
       </div>
     </div>

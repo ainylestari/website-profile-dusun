@@ -98,7 +98,7 @@ export function Home() {
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-primary flex-shrink-0">
                   <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+                    src="https://ssnmnvmwpwegwponzkaf.supabase.co/storage/v1/object/public/assets/kadus/9014688285_75131472632167_1770218940242.png"
                     alt="Kepala Dusun"
                     className="w-full h-full object-cover"
                   />
