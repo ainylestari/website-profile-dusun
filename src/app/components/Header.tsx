@@ -18,7 +18,6 @@ export function Header() {
     { name: 'Beranda', path: '/' },
     { name: 'Profil Dusun', path: '/profil' },
     { name: 'Potensi Dusun', path: '/potensi' },
-    { name: 'Peta Evakuasi', path: '/peta-evakuasi' },
     { name: 'Berita', path: '/berita' },
     { name: 'Kontak', path: '/kontak' }
   ];

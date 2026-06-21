@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+{/*import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
@@ -210,7 +210,7 @@ export function AdminEvacuationMap() {
         </Button>
       </div>
 
-      {/* Gambar Peta */}
+      
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -271,7 +271,6 @@ export function AdminEvacuationMap() {
         </CardContent>
       </Card>
 
-      {/* Titik Evakuasi */}
       <Card>
         <CardHeader>
           <CardTitle>Titik Penting Evakuasi</CardTitle>
@@ -312,7 +311,6 @@ export function AdminEvacuationMap() {
         </CardContent>
       </Card>
 
-      {/* Kontak Darurat */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -346,7 +344,6 @@ export function AdminEvacuationMap() {
         </CardContent>
       </Card>
 
-      {/* Prosedur Evakuasi */}
       <Card>
         <CardHeader>
           <CardTitle>Prosedur Evakuasi</CardTitle>
@@ -384,3 +381,4 @@ export function AdminEvacuationMap() {
     </div>
   );
 }
+*/}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+{/*import { useState, useEffect } from 'react';
 import { AlertTriangle, MapPin, Phone, Info, ZoomIn, ZoomOut, Download, Loader2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -100,7 +100,6 @@ export function EvacuationMap() {
       </div>
 
       <div className="container mx-auto px-4 py-10 space-y-10">
-        {/* Peta Utama */}
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold flex items-center gap-2">
@@ -213,4 +212,4 @@ export function EvacuationMap() {
       </div>
     </div>
   );
-}
+}*/}
