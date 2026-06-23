@@ -235,7 +235,7 @@ export function Potential() {
           <TabsContent value="livestock">
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Peternakan</h2>
-              <p className="text-muted-foreground">Hasil peternakan yang menjadi salah satu sumber penghasilan masyarakat Dusun Ngrancah</p>
+              <p className="text-muted-foreground">Hasil peternakan yang menjadi salah satu sumber penghasilan masyarakat Dusun Tirtomoyo</p>
             </div>
           
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -293,7 +293,7 @@ export function Potential() {
                   <div>
                     <h3 className="font-bold text-lg mb-2">Pola Peternakan Terpadu</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Masyarakat Dusun Ngrancah menerapkan pola peternakan terpadu yang memanfaatkan
+                      Masyarakat Dusun Tirtomoyo menerapkan pola peternakan terpadu yang memanfaatkan
                       limbah pertanian sebagai pakan ternak, dan kotoran ternak sebagai pupuk organik
                       untuk lahan pertanian. Sistem ini menjaga keseimbangan ekosistem sekaligus
                       meningkatkan pendapatan warga.
@@ -305,7 +305,7 @@ export function Potential() {
           
             <Card className="mt-6 bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Potensi Peternakan Dusun Ngrancah</h3>
+                <h3 className="text-2xl font-bold mb-4">Potensi Peternakan Dusun Tirtomoyo</h3>
                 <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
                   Sektor peternakan menjadi salah satu pilar ekonomi masyarakat yang terus
                   berkembang dengan dukungan lahan hijau yang luas dan sumber pakan yang melimpah.

@@ -67,7 +67,7 @@ export function Home() {
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Selamat Datang di {villageInfo?.name ?? 'Dusun Ngrancah'}
+              Selamat Datang di {villageInfo?.name ?? 'Dusun Tirtomoyo'}
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-95">
               Dusun yang indah dengan masyarakat yang ramah, berbudaya, dan terus berkembang
@@ -109,13 +109,13 @@ export function Home() {
                   <p className="leading-relaxed mb-4">
                     Puji syukur kehadirat Allah SWT, dengan hadirnya website ini, kami berharap dapat
                     memberikan informasi yang transparan dan mudah diakses oleh seluruh masyarakat
-                    Dusun Ngrancah dan masyarakat luas. Website ini merupakan wujud komitmen kami
+                    Dusun Tirtomoyo dan masyarakat luas. Website ini merupakan wujud komitmen kami
                     dalam meningkatkan pelayanan dan komunikasi kepada masyarakat.
                   </p>
                   <p className="font-medium">
                     {villageInfo?.headOfHamlet ?? '-'}
                     <br />
-                    <span className="text-muted-foreground font-normal">Kepala Dusun Ngrancah</span>
+                    <span className="text-muted-foreground font-normal">Kepala Dusun Tirtomoyo</span>
                   </p>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export function Home() {
         <section className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-primary mb-2">Potensi Dusun</h2>
-            <p className="text-muted-foreground">Kekayaan dan potensi yang dimiliki Dusun Ngrancah</p>
+            <p className="text-muted-foreground">Kekayaan dan potensi yang dimiliki Dusun Tirtomoyo</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -216,7 +216,7 @@ export function Home() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl font-bold text-primary mb-2">Berita Terkini</h2>
-              <p className="text-muted-foreground">Informasi dan kegiatan terbaru di Dusun Ngrancah</p>
+              <p className="text-muted-foreground">Informasi dan kegiatan terbaru di Dusun Tirtomoyo</p>
             </div>
             <Link to="/berita">
               <Button variant="outline" className="hidden md:flex">

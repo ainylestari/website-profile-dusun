@@ -45,7 +45,7 @@ export function Header() {
               <span className="text-2xl text-primary-foreground">🏘️</span>
             </div>
             <div>
-              <h1 className="font-bold text-primary">Dusun Ngrancah</h1>
+              <h1 className="font-bold text-primary">Dusun Tirtomoyo</h1>
               <p className="text-xs text-muted-foreground">Desa Bumiharjo</p>
             </div>
           </Link>

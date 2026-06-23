@@ -22,12 +22,12 @@ export function Footer() {
                 <span className="text-xl">🏘️</span>
               </div>
               <div>
-                <h3 className="font-bold">{villageInfo?.name ?? 'Dusun Ngrancah'}</h3>
+                <h3 className="font-bold">{villageInfo?.name ?? 'Dusun Tirtomoyo'}</h3>
                 <p className="text-xs opacity-90">{villageInfo?.village ?? 'Desa Bumiharjo'}</p>
               </div>
             </div>
             <p className="text-sm opacity-90 leading-relaxed">
-              Website resmi Dusun Ngrancah, menyajikan informasi terkini tentang profil,
+              Website resmi Dusun Tirtomoyo, menyajikan informasi terkini tentang profil,
               potensi, dan kegiatan di dusun kami.
             </p>
           </div>
@@ -74,7 +74,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-4">
           <p className="text-center text-sm opacity-90">
-            &copy; {new Date().getFullYear()} {villageInfo?.name ?? 'Dusun Ngrancah'}. Dikembangkan oleh Tim KKN UPN "Veteran" Yogyakarta.
+            &copy; {new Date().getFullYear()} {villageInfo?.name ?? 'Dusun Tirtomoyo'}. Dikembangkan oleh Tim KKN UPN "Veteran" Yogyakarta.
           </p>
         </div>
       </div>
