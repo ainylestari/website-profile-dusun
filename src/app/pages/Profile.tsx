@@ -37,7 +37,7 @@ export function Profile() {
       <div className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">Profil Dusun</h1>
-          <p className="text-lg opacity-90">Mengenal lebih dekat {villageInfo?.name ?? 'Dusun Sukamaju'}</p>
+          <p className="text-lg opacity-90">Mengenal lebih dekat {villageInfo?.name ?? 'Dusun Tirtomoyo'}</p>
         </div>
       </div>
 

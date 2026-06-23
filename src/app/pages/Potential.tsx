@@ -39,7 +39,7 @@ export function Potential() {
       <div className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">Potensi Dusun</h1>
-          <p className="text-lg opacity-90">Kekayaan dan potensi yang dimiliki Dusun Sukamaju</p>
+          <p className="text-lg opacity-90">Kekayaan dan potensi yang dimiliki Dusun Tirtomoyo</p>
         </div>
       </div>
 
@@ -56,7 +56,7 @@ export function Potential() {
           <TabsContent value="umkm">
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Usaha Mikro Kecil dan Menengah</h2>
-              <p className="text-muted-foreground">Berbagai usaha lokal yang dikembangkan oleh masyarakat Dusun Sukamaju</p>
+              <p className="text-muted-foreground">Berbagai usaha lokal yang dikembangkan oleh masyarakat Dusun Tirtomoyo</p>
             </div>
             {umkmList.length === 0 ? (
               <div className="text-center py-16">
@@ -156,7 +156,7 @@ export function Potential() {
                   <div>
                     <h3 className="font-bold text-lg mb-2">Sistem Pertanian Modern</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Dusun Sukamaju menerapkan sistem pertanian modern dengan irigasi teknis,
+                      Dusun Tirtomoyo menerapkan sistem pertanian modern dengan irigasi teknis,
                       penggunaan pupuk organik, dan pengendalian hama terpadu. Hal ini meningkatkan
                       produktivitas dan kualitas hasil pertanian secara signifikan.
                     </p>
@@ -212,7 +212,7 @@ export function Potential() {
 
             <Card className="mt-6 bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Kunjungi Dusun Sukamaju</h3>
+                <h3 className="text-2xl font-bold mb-4">Kunjungi Dusun Tirtomoyo</h3>
                 <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
                   Nikmati keindahan alam, udara segar, dan keramahan masyarakat. Cocok untuk
                   refreshing bersama keluarga atau gathering kantor.

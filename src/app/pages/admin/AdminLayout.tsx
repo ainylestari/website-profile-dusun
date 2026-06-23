@@ -44,7 +44,6 @@ export function AdminLayout() {
     { name: 'Struktur Organisasi', path: '/admin/organization', icon: Users2 },
     { name: 'Data Kependudukan', path: '/admin/stats', icon: BarChart3 },
     { name: 'Kelola Berita', path: '/admin/news', icon: Newspaper },
-    { name: 'Peta Evakuasi', path: '/admin/evacuation-map', icon: AlertTriangle },
     { name: 'Kelola UMKM', path: '/admin/umkm', icon: Briefcase },
     { name: 'Kelola Wisata', path: '/admin/attractions', icon: MapPin },
   ];
@@ -63,7 +62,7 @@ export function AdminLayout() {
               </div>
               <div>
                 <h1 className="font-bold">Admin Panel</h1>
-                <p className="text-xs opacity-90">Dusun Sukamaju</p>
+                <p className="text-xs opacity-90">Dusun Tirtomoyo</p>
               </div>
             </div>
 

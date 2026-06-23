@@ -140,7 +140,7 @@ export function AdminOrganization() {
       <Card>
         <CardHeader>
           <CardTitle>Daftar Pengurus</CardTitle>
-          <CardDescription>Struktur organisasi Dusun Sukamaju</CardDescription>
+          <CardDescription>Struktur organisasi Dusun Tirtomoyo</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">

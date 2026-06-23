@@ -40,7 +40,7 @@ export function News() {
       <div className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">Berita & Kegiatan</h1>
-          <p className="text-lg opacity-90">Informasi terkini dari Dusun Sukamaju</p>
+          <p className="text-lg opacity-90">Informasi terkini dari Dusun Tirtomoyo</p>
         </div>
       </div>
 

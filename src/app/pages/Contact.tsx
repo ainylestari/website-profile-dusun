@@ -186,7 +186,7 @@ export function Contact() {
               <CardContent className="p-6">
                 <h3 className="font-bold text-lg mb-2">Kepala Dusun</h3>
                 <p className="text-xl mb-1">{villageInfo?.headOfHamlet || '-'}</p>
-                <p className="opacity-90">{villageInfo?.name || 'Dusun Sukamaju'}</p>
+                <p className="opacity-90">{villageInfo?.name || 'Dusun Tirtomoyo'}</p>
               </CardContent>
             </Card>
           </div>
