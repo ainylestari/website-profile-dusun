@@ -48,7 +48,7 @@ export function Potential() {
           <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="umkm">UMKM</TabsTrigger>
             <TabsTrigger value="agriculture">Pertanian</TabsTrigger>
-            <TabsTrigger value="tourism">Budaya & Adat</TabsTrigger>
+            <TabsTrigger value="culture">Budaya & Adat</TabsTrigger>
             {/*<TabsTrigger value="livestock">Peternakan</TabsTrigger>*/}
           </TabsList>
 
