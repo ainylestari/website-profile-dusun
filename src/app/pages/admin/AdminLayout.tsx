@@ -45,7 +45,6 @@ export function AdminLayout() {
     { name: 'Data Kependudukan', path: '/admin/stats', icon: BarChart3 },
     { name: 'Kelola Berita', path: '/admin/news', icon: Newspaper },
     { name: 'Kelola UMKM', path: '/admin/umkm', icon: Briefcase },
-    { name: 'Kelola Wisata', path: '/admin/attractions', icon: MapPin },
   ];
 
   if (!user) return null;

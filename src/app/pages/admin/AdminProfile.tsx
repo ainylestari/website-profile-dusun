@@ -127,16 +127,6 @@ export function AdminProfile() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Sejarah</CardTitle>
-          <CardDescription>Sejarah dan latar belakang dusun</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Textarea value={info.history} onChange={(e) => setInfo({ ...info, history: e.target.value })} rows={8} placeholder="Tuliskan sejarah dusun..." />
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
           <CardTitle>Visi</CardTitle>
           <CardDescription>Visi dusun untuk masa depan</CardDescription>
         </CardHeader>
