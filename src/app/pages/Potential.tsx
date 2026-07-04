@@ -48,7 +48,7 @@ export function Potential() {
           <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="umkm">UMKM</TabsTrigger>
             <TabsTrigger value="agriculture">Pertanian</TabsTrigger>
-            <TabsTrigger value="tourism">Wisata</TabsTrigger>
+            <TabsTrigger value="tourism">Budaya & Adat</TabsTrigger>
             {/*<TabsTrigger value="livestock">Peternakan</TabsTrigger>*/}
           </TabsList>
 
@@ -167,60 +167,167 @@ export function Potential() {
           </TabsContent>
 
           {/* Tourism Tab */}
-          <TabsContent value="tourism">
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-2">Destinasi Wisata</h2>
-              <p className="text-muted-foreground">Tempat wisata alam yang indah dan menarik untuk dikunjungi</p>
-            </div>
-            {touristAttractions.length === 0 ? (
-              <div className="text-center py-16">
-                <MapPin className="h-12 w-12 mx-auto mb-3 text-muted-foreground opacity-30" />
-                <p className="text-muted-foreground">Belum ada data wisata. Tambahkan melalui panel admin.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {touristAttractions.map((attraction) => (
-                  <Card key={attraction.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="h-64 overflow-hidden">
-                      <img
-                        src={attraction.image}
-                        alt={attraction.name}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-2xl">{attraction.name}</CardTitle>
-                      <CardDescription className="text-base leading-relaxed">{attraction.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="mb-4">
-                        <h4 className="font-medium mb-2 flex items-center gap-2">
-                          <MapPin className="h-4 w-4 text-primary" />
-                          Fasilitas:
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {attraction.facilities.map((facility, index) => (
-                            <Badge key={index} variant="outline">{facility}</Badge>
-                          ))}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            )}
 
-            <Card className="mt-6 bg-primary text-primary-foreground">
+          <TabsContent value="culture">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-primary mb-2">Budaya & Adat Istiadat</h2>
+              <p className="text-muted-foreground">
+                Tradisi dan budaya yang hidup di masyarakat Dusun Ngrancah dan sekitar Kecamatan Kemalang,
+                lereng timur Gunung Merapi
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              {/* Kirab Ageng Metri Bumi Merapi */}
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-primary">
+                <CardHeader>
+                  <div className="flex items-start gap-3">
+                    <div className="text-4xl">🏔️</div>
+                    <div>
+                      <CardTitle>Kirab Ageng Metri Bumi Merapi</CardTitle>
+                      <Badge variant="secondary" className="mt-1">Ritual Tahunan</Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Ritual budaya tahunan di kawasan lereng Merapi sebagai bentuk doa bersama untuk
+                    keselamatan, perlindungan, dan kelestarian alam. Diselenggarakan di wilayah Kecamatan
+                    Kemalang dan melibatkan seluruh desa termasuk Dusun Ngrancah.
+                  </p>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Prosesi</span>
+                      <span>Arak-arakan <strong>gunungan hasil bumi</strong> dari tiap desa</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Kesenian</span>
+                      <span>Tari Gambyong, Jathilan, Topeng Ireng, Warok</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Makna</span>
+                      <span>Syukur atas hasil bumi, keselarasan manusia dengan alam</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Merti Dusun */}
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-secondary">
+                <CardHeader>
+                  <div className="flex items-start gap-3">
+                    <div className="text-4xl">🌾</div>
+                    <div>
+                      <CardTitle>Merti Dusun</CardTitle>
+                      <Badge variant="secondary" className="mt-1">Tradisi Desa</Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Upacara bersih desa sebagai ungkapan rasa syukur kepada Tuhan atas hasil panen yang
+                    melimpah dan keselamatan warga dusun. Menjadi sarana mempererat tali persaudaraan
+                    antarwarga.
+                  </p>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Prosesi</span>
+                      <span>Kirab budaya, doa bersama, kenduri selamatan</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Hidangan</span>
+                      <span>Tumpeng, nasi ambeng, ingkung ayam</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Makna</span>
+                      <span>Gotong royong, syukur, dan pelestarian lingkungan</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Nyadran */}
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-chart-3">
+                <CardHeader>
+                  <div className="flex items-start gap-3">
+                    <div className="text-4xl">🌸</div>
+                    <div>
+                      <CardTitle>Nyadran</CardTitle>
+                      <Badge variant="secondary" className="mt-1">Tradisi Jawa</Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Tradisi ziarah dan bersih makam leluhur yang diselenggarakan setiap menjelang bulan
+                    Ramadan. Merupakan warisan budaya turun-temurun sebagai sarana komunikasi sosial
+                    dan penghormatan kepada leluhur.
+                  </p>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Waktu</span>
+                      <span>Menjelang bulan Ramadan (Ruwah)</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Prosesi</span>
+                      <span>Bersih makam, tabur bunga, doa bersama, makan kenduri</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Makna</span>
+                      <span>Menghormati leluhur dan mempererat kebersamaan</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Wiwitan */}
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-chart-4">
+                <CardHeader>
+                  <div className="flex items-start gap-3">
+                    <div className="text-4xl">🌿</div>
+                    <div>
+                      <CardTitle>Wiwitan</CardTitle>
+                      <Badge variant="secondary" className="mt-1">Tradisi Petani</Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Upacara syukuran sebelum masa panen dimulai, sebagai bentuk rasa syukur kepada
+                    Tuhan dan permohonan agar panen berjalan lancar dan hasilnya melimpah. Masih
+                    dilestarikan oleh petani di lereng Merapi.
+                  </p>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Waktu</span>
+                      <span>Menjelang musim panen padi/hasil bumi</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Prosesi</span>
+                      <span>Sesaji, doa bersama, kenduri di lahan pertanian</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <span className="text-muted-foreground w-20 shrink-0">Makna</span>
+                      <span>Syukur dan harapan panen yang berkah</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Banner bawah */}
+            <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Kunjungi Dusun Tirtomoyo</h3>
+                <h3 className="text-2xl font-bold mb-4">🏔️ Hidup Berdampingan dengan Merapi</h3>
                 <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                  Nikmati keindahan alam, udara segar, dan keramahan masyarakat. Cocok untuk
-                  refreshing bersama keluarga atau gathering kantor.
+                  Masyarakat Dusun Ngrancah mewarisi kearifan lokal yang kuat — tradisi dan budaya
+                  leluhur menjadi pedoman hidup selaras dengan alam Gunung Merapi yang mereka cintai.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   {[
-                    ['Jam Buka', '24 Jam'],
-                    ['Akses', 'Mudah Dijangkau'],
+                    ['Tradisi Aktif', '4+ Tradisi'],
+                    ['Warisan Budaya', 'Turun-temurun'],
+                    ['Nilai Utama', 'Gotong Royong'],
                   ].map(([label, value]) => (
                     <div key={label} className="bg-white/10 rounded-lg px-6 py-3">
                       <p className="text-sm opacity-90">{label}</p>
