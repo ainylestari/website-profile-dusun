@@ -51,13 +51,13 @@ export function AdminDashboard() {
       {/* Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
-          { label: 'Total Berita', value: news.length, icon: Newspaper, color: 'primary' },
-          { label: 'Total UMKM', value: umkm.length, icon: Briefcase, color: 'chart-3' },
-          { label: 'Kategori Berita', value: new Set(news.map(n => n.category)).size, icon: TrendingUp, color: 'chart-3' },
           { label: 'Total Penduduk', value: stats.population.toLocaleString('id-ID'), icon: Users, color: 'primary' },
           { label: 'Kepala Keluarga', value: stats.families.toLocaleString('id-ID'), icon: Users2, color: 'secondary' },
           { label: 'UMKM Terdaftar', value: stats.umkm, icon: Briefcase, color: 'chart-3' },
           { label: 'Luas Wilayah', value: stats.area, icon: BarChart3, color: 'chart-4' },
+          { label: 'Total Berita', value: news.length, icon: Newspaper, color: 'primary' },
+          { label: 'Total UMKM', value: umkm.length, icon: Briefcase, color: 'chart-3' },
+          { label: 'Kategori Berita', value: new Set(news.map(n => n.category)).size, icon: TrendingUp, color: 'chart-3' },
         ].map(({ label, value, icon: Icon, color }) => (
           <Card key={label}>
             <CardContent className="p-6">
