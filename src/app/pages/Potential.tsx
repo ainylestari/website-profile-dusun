@@ -193,7 +193,7 @@ export function Potential() {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     Ritual budaya tahunan di kawasan lereng Merapi sebagai bentuk doa bersama untuk
                     keselamatan, perlindungan, dan kelestarian alam. Diselenggarakan di wilayah Kecamatan
-                    Kemalang dan melibatkan seluruh desa termasuk Dusun Ngrancah.
+                    Kemalang dan melibatkan seluruh desa termasuk Dusun Tirtomoyo.
                   </p>
                   <div className="space-y-1 text-sm">
                     <div className="flex gap-2">
@@ -320,7 +320,7 @@ export function Potential() {
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">🏔️ Hidup Berdampingan dengan Merapi</h3>
                 <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                  Masyarakat Dusun Ngrancah mewarisi kearifan lokal yang kuat — tradisi dan budaya
+                  Masyarakat Dusun Tirtomoyo mewarisi kearifan lokal yang kuat — tradisi dan budaya
                   leluhur menjadi pedoman hidup selaras dengan alam Gunung Merapi yang mereka cintai.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
