@@ -172,7 +172,7 @@ export function Potential() {
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Budaya & Adat Istiadat</h2>
               <p className="text-muted-foreground">
-                Tradisi dan budaya yang hidup di masyarakat Dusun Ngrancah dan sekitar Kecamatan Kemalang,
+                Tradisi dan budaya yang hidup di masyarakat Dusun Tirtomoyo dan sekitar Kecamatan Kemalang,
                 lereng timur Gunung Merapi
               </p>
             </div>
