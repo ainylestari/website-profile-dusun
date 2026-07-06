@@ -316,10 +316,10 @@ export function Potential() {
             </div>
 
             {/* Banner bawah */}
-            <Card className="bg-primary text-primary-foreground">
+            <Card className="mt-6 bg-muted/50">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">🏔️ Hidup Berdampingan dengan Merapi</h3>
-                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
                   Masyarakat Dusun Tirtomoyo mewarisi kearifan lokal yang kuat — tradisi dan budaya
                   leluhur menjadi pedoman hidup selaras dengan alam Gunung Merapi yang mereka cintai.
                 </p>
@@ -329,9 +329,9 @@ export function Potential() {
                     ['Warisan Budaya', 'Turun-temurun'],
                     ['Nilai Utama', 'Gotong Royong'],
                   ].map(([label, value]) => (
-                    <div key={label} className="bg-white/10 rounded-lg px-6 py-3">
-                      <p className="text-sm opacity-90">{label}</p>
-                      <p className="font-bold text-lg">{value}</p>
+                    <div key={label} className="bg-background border border-border rounded-lg px-6 py-3 shadow-sm">
+                      <p className="text-sm text-muted-foreground">{label}</p>
+                      <p className="font-bold text-lg text-primary">{value}</p>
                     </div>
                   ))}
                 </div>

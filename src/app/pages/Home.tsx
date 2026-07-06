@@ -199,12 +199,12 @@ export function Home() {
                 <TrendingUp className="h-20 w-20 text-white" />
               </div>
               <CardHeader>
-                <CardTitle>Wisata</CardTitle>
-                <CardDescription>Destinasi wisata alam yang indah dan menarik</CardDescription>
+                <CardTitle>Budaya & Adat</CardTitle>
+                <CardDescription>Tradisi dan kearifan lokal masyarakat lereng Merapi</CardDescription>
               </CardHeader>
               <CardContent>
                 <Link to="/potensi">
-                  <Button variant="outline" className="w-full">Lihat Wisata <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  <Button variant="outline" className="w-full">Lihat Budaya <ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </Link>
               </CardContent>
             </Card>
