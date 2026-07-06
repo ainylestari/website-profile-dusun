@@ -166,8 +166,7 @@ export function Potential() {
             </Card>
           </TabsContent>
 
-          {/* Tourism Tab */}
-
+          {/* Culture Tab */}
           <TabsContent value="culture">
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Budaya & Adat Istiadat</h2>
@@ -179,7 +178,7 @@ export function Potential() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               {/* Kirab Ageng Metri Bumi Merapi */}
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-primary">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-start gap-3">
                     <div className="text-4xl">🏔️</div>
@@ -213,7 +212,7 @@ export function Potential() {
               </Card>
 
               {/* Merti Dusun */}
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-secondary">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-start gap-3">
                     <div className="text-4xl">🌾</div>
@@ -247,7 +246,7 @@ export function Potential() {
               </Card>
 
               {/* Nyadran */}
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-chart-3">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-start gap-3">
                     <div className="text-4xl">🌸</div>
@@ -281,7 +280,7 @@ export function Potential() {
               </Card>
 
               {/* Wiwitan */}
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow border-l-4 border-l-chart-4">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-start gap-3">
                     <div className="text-4xl">🌿</div>
