@@ -59,7 +59,7 @@ export function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200)',
+            backgroundImage: 'url(https://ssnmnvmwpwegwponzkaf.supabase.co/storage/v1/object/public/assets/5f9fb8289a630.jpg)',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
