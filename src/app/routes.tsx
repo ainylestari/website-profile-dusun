@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: AdminLogin },
       {
-        path: '',
+        path: '/',
         element: (
           <ProtectedRoute>
             <AdminLayout />
