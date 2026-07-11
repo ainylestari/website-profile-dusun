@@ -110,40 +110,27 @@ export function Potential() {
                 {
                   color: 'primary',
                   title: 'Padi',
-                  desc: 'Tanaman padi menjadi komoditas utama dengan lahan sawah seluas 150 hektar',
-                  stats: [['Luas Lahan', '150 Ha'], ['Masa Panen', '3-4 bulan'], ['Produksi/Tahun', '900 ton']],
+                  desc: 'Tanaman padi menjadi komoditas utama warga Dusun Ngrancah. Lahan sawah di lereng Merapi menghasilkan panen yang berkualitas berkat tanah vulkanik yang subur.',
                 },
                 {
                   color: 'secondary',
                   title: 'Sayuran',
-                  desc: 'Berbagai jenis sayuran segar seperti cabai, tomat, kangkung, dan bayam',
-                  stats: [['Luas Lahan', '45 Ha'], ['Jenis Tanaman', '15+ jenis'], ['Panen', 'Kontinyu']],
+                  desc: 'Berbagai jenis sayuran segar ditanam warga seperti cabai, tomat, dan sayuran hijau. Hasil panen dipasarkan ke pasar lokal sekitar Kecamatan Kemalang.',
                 },
                 {
                   color: 'chart-3',
                   title: 'Perkebunan',
-                  desc: 'Kopi, kelapa, dan buah-buahan tropis seperti durian dan rambutan',
-                  stats: [['Luas Lahan', '80 Ha'], ['Komoditas', 'Kopi, Kelapa'], ['Petani', '120+ KK']],
+                  desc: 'Warga juga mengusahakan lahan perkebunan dengan berbagai komoditas buah dan tanaman keras sebagai sumber penghasilan tambahan keluarga.',
                 },
-              ].map(({ color, title, desc, stats }) => (
+              ].map(({ color, title, desc }) => (
                 <Card key={title}>
                   <CardHeader>
                     <div className={`w-16 h-16 bg-${color}/10 rounded-full flex items-center justify-center mb-4`}>
                       <Leaf className={`h-8 w-8 text-${color}`} />
                     </div>
                     <CardTitle>{title}</CardTitle>
-                    <CardDescription>{desc}</CardDescription>
+                    <CardDescription className="mt-2 pb-4">{desc}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2 text-sm">
-                      {stats.map(([label, value]) => (
-                        <div key={label} className="flex justify-between">
-                          <span className="text-muted-foreground">{label}</span>
-                          <span className="font-medium">{value}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
                 </Card>
               ))}
             </div>

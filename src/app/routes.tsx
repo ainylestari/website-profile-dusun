@@ -16,6 +16,7 @@ import { AdminOrganization } from './pages/admin/AdminOrganization';
 import { AdminStats } from './pages/admin/AdminStats';
 import { AdminUMKM } from './pages/admin/AdminUMKM';
 import { AdminAttractions } from './pages/admin/AdminAttractions';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ export const router = createBrowserRouter([
       { index: true, Component: AdminLogin },
       {
         path: '',
-        Component: AdminLayout,
+        element: (
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        ),
         children: [
           { path: 'dashboard', Component: AdminDashboard },
           { path: 'profile', Component: AdminProfile },
