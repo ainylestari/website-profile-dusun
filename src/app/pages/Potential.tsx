@@ -99,41 +99,44 @@ export function Potential() {
             )}
           </TabsContent>
 
-          {/* Agriculture Tab */}
+          {/* Agriculture & Livestock Tab */}
           <TabsContent value="agriculture">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-2">Pertanian dan Perkebunan</h2>
-              <p className="text-muted-foreground">Hasil pertanian dan perkebunan yang menjadi mata pencaharian utama masyarakat</p>
+              <h2 className="text-2xl font-bold text-primary mb-2">Pertanian & Peternakan</h2>
+              <p className="text-muted-foreground">
+                Hasil pertanian dan peternakan yang menjadi mata pencaharian utama masyarakat
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
-                  color: 'primary',
-                  title: 'Padi',
-                  desc: 'Tanaman padi menjadi komoditas utama warga Dusun Ngrancah. Lahan sawah di lereng Merapi menghasilkan panen yang berkualitas berkat tanah vulkanik yang subur.',
+                  title: 'Pertanian',
+                  imageUrl: 'https://ssnmnvmwpwegwponzkaf.supabase.co/storage/v1/object/public/assets/ariOrganik.jpg',
+                  desc: 'Pertanian di Dusun Tirtomoyo meliputi tanaman padi, sayuran, cabai, hingga perkebunan buah dan tanaman keras. Tanah vulkanik di lereng Merapi menjadikan lahan pertanian sangat subur, sehingga menghasilkan panen yang berkualitas dan menjadi sumber penghasilan utama sekaligus tambahan bagi keluarga.',
                 },
                 {
-                  color: 'secondary',
-                  title: 'Sayuran',
-                  desc: 'Berbagai jenis sayuran segar ditanam warga seperti cabai, tomat, dan sayuran hijau. Hasil panen dipasarkan ke pasar lokal sekitar Kecamatan Kemalang.',
+                  title: 'Peternakan',
+                  imageUrl: 'https://ssnmnvmwpwegwponzkaf.supabase.co/storage/v1/object/public/assets/62838704500bb.jpg',
+                  desc: 'Selain bertani, warga juga mengusahakan peternakan sebagai sumber penghasilan tambahan, terutama sapi dan kambing. Usaha ternak ini dijalankan secara turun-temurun dan menjadi salah satu bentuk investasi jangka panjang bagi keluarga di Dusun Tirtomoyo.',
                 },
-                {
-                  color: 'chart-3',
-                  title: 'Perkebunan',
-                  desc: 'Warga juga mengusahakan lahan perkebunan dengan berbagai komoditas buah dan tanaman keras sebagai sumber penghasilan tambahan keluarga.',
-                },
-              ].map(({ color, title, desc }) => (
-                <Card key={title}>
+              ].map(({ title, imageUrl, desc }) => (
+                <Card key={title} className="overflow-hidden pt-0">
+                  <div className="w-full h-56 bg-muted overflow-hidden">
+                    <img
+                      src={imageUrl}
+                      alt={title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <CardHeader>
-                    <div className={`w-16 h-16 bg-${color}/10 rounded-full flex items-center justify-center mb-4`}>
-                      <Leaf className={`h-8 w-8 text-${color}`} />
-                    </div>
-                    <CardTitle>{title}</CardTitle>
-                    <CardDescription className="mt-2 pb-4">{desc}</CardDescription>
+                    <CardTitle className="text-xl">{title}</CardTitle>
+                    <CardDescription className="mt-2 pb-4 leading-relaxed">{desc}</CardDescription>
                   </CardHeader>
                 </Card>
               ))}
             </div>
+
             <Card className="mt-6 bg-muted/50">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
@@ -141,18 +144,18 @@ export function Potential() {
                     <Leaf className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Sistem Pertanian Modern</h3>
+                    <h3 className="font-bold text-lg mb-2">Sistem Pertanian & Peternakan Modern</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       Dusun Tirtomoyo menerapkan sistem pertanian modern dengan irigasi teknis,
-                      penggunaan pupuk organik, dan pengendalian hama terpadu. Hal ini meningkatkan
-                      produktivitas dan kualitas hasil pertanian secara signifikan.
+                      penggunaan pupuk organik, dan pengendalian hama terpadu, serta pengelolaan
+                      peternakan yang memperhatikan aspek kesehatan hewan. Hal ini meningkatkan
+                      produktivitas dan kualitas hasil pertanian dan peternakan secara signifikan.
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
-
           {/* Culture Tab */}
           <TabsContent value="culture">
             <div className="mb-8">
@@ -306,7 +309,7 @@ export function Potential() {
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold mb-4">🏔️ Hidup Berdampingan dengan Merapi</h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
-                  Masyarakat Dusun Tirtomoyo mewarisi kearifan lokal yang kuat — tradisi dan budaya
+                  Masyarakat Dusun Tirtomoyo mewarisi kearifan lokal yang kuat, tradisi dan budaya
                   leluhur menjadi pedoman hidup selaras dengan alam Gunung Merapi yang mereka cintai.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
