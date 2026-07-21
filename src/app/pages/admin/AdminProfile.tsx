@@ -110,10 +110,6 @@ export function AdminProfile() {
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="phone">Telepon</Label>
-              <Input id="phone" value={info.phone} onChange={(e) => setInfo({ ...info, phone: e.target.value })} />
-            </div>
-            <div>
               <Label htmlFor="email">Email</Label>
               <Input id="email" type="email" value={info.email} onChange={(e) => setInfo({ ...info, email: e.target.value })} />
             </div>

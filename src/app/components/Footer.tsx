@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Mail, MapPin, Phone, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router';
 import { getVillageInfo } from '../lib/data';
 import type { VillageInfo } from '../lib/data';
@@ -39,10 +39,6 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span className="opacity-90">{villageInfo?.address ?? '-'}</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 flex-shrink-0" />
-                <span className="opacity-90">{villageInfo?.phone ?? '-'}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />

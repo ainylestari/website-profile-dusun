@@ -144,19 +144,6 @@ export function Contact() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Telepon</h4>
-                    {villageInfo?.phone
-                      ? <a href={`tel:${villageInfo.phone}`} className="text-muted-foreground hover:text-primary">{villageInfo.phone}</a>
-                      : <p className="text-muted-foreground">-</p>
-                    }
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
