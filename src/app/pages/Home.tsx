@@ -143,7 +143,7 @@ export function Home() {
             <Card className="bg-gradient-to-br from-chart-3 to-chart-3/80 text-white shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-6">
                 <Store className="h-10 w-10 mb-3 opacity-90" />
-                <p className="text-3xl font-bold mb-1">{villageStats.umkm}</p>
+                <p className="text-3xl font-bold mb-1">{umkmList.length}</p>
                 <p className="text-sm opacity-90">UMKM Aktif</p>
               </CardContent>
             </Card>
