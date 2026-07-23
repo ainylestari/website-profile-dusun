@@ -117,7 +117,7 @@ export function Potential() {
                 },
                 {
                   title: 'Peternakan',
-                  imageUrl: 'https://ssnmnvmwpwegwponzkaf.supabase.co/storage/v1/object/public/assets/62838704500bb.jpg',
+                  imageUrl: 'https://ssnmnvmwpwegwponzkaf.supabase.co/storage/v1/object/public/assets/DSC08368.JPG',
                   desc: 'Selain bertani, warga juga mengusahakan peternakan sebagai sumber penghasilan tambahan, terutama sapi dan kambing. Usaha ternak ini dijalankan secara turun-temurun dan menjadi salah satu bentuk investasi jangka panjang bagi keluarga di Dusun Tirtomoyo.',
                 },
               ].map(({ title, imageUrl, desc }) => (
