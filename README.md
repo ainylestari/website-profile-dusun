@@ -32,6 +32,58 @@ Dikembangkan sebagai bagian dari program **Kuliah Kerja Nyata (KKN)** Universita
 
 ---
 
+## 🚀 Menjalankan Project
+
+### Prasyarat
+- Node.js v18+
+- Akun Supabase
+- Akun EmailJS (opsional, untuk fitur kontak)
+
+### Instalasi
+
+```bash
+# Clone repository
+git clone https://github.com/ainylestari/website-profile-dusun
+
+# Install dependencies
+npm install
+```
+
+### Konfigurasi Environment
+
+Buat file `.env.local` di root folder:
+
+```env
+VITE_SUPABASE_URL=https://xxxxxx.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGci...
+```
+
+### Jalankan Development Server
+
+```bash
+npm run dev
+```
+
+Buka [http://localhost:5173](http://localhost:5173) di browser.
+
+### Build Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🗄️ Setup Database
+
+Jalankan SQL berikut di Supabase SQL Editor:
+
+1. `supabase_schema.sql` — Membuat semua tabel utama
+
+Buat akun admin di **Supabase → Authentication → Users → Add User**.
+
+---
+
 ## 📁 Struktur Folder
 
 ```
@@ -45,9 +97,20 @@ src/
         └── *.tsx       # Halaman publik
 ```
 
+---
+
+## 🌐 Deploy ke Vercel
+
+1. Push kode ke GitHub
+2. Import repository di [vercel.com](https://vercel.com)
+3. Tambahkan environment variables (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`)
+4. Deploy otomatis setiap `git push`
+
+---
+
 ## 👥 Tim KKN UPN "Veteran" Yogyakarta
 
-Dikembangkan oleh mahasiswa KKN 84.239 UPN "Veteran" Yogyakarta yang bertugas di Dusun Tirtomoyo, Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten.
+Dikembangkan oleh mahasiswa KKN UPN "Veteran" Yogyakarta yang bertugas di Dusun Tirtomoyo, Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten.
 
 ---
 
