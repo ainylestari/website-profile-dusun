@@ -297,3 +297,58 @@ export const deleteAttraction = async (id: string): Promise<boolean> => {
   if (error) { console.error('Error deleting attraction:', error); return false; }
   return true;
 };
+
+// Tambahkan ke src/app/lib/data.ts
+
+export interface Announcement {
+  id: string;
+  title: string;
+  content: string;
+  image_url: string;
+  is_active: boolean;
+  show_popup: boolean;
+  created_at: string;
+  expired_at: string | null;
+}
+
+export const getAnnouncements = async (): Promise<Announcement[]> => {
+  const { data, error } = await supabase
+    .from('announcements')
+    .select('*')
+    .eq('is_active', true)
+    .order('created_at', { ascending: false });
+
+  if (error) { console.error('Error fetching announcements:', error); return []; }
+  return data;
+};
+
+export const saveAnnouncement = async (item: Omit<Announcement, 'id' | 'created_at'>): Promise<Announcement | null> => {
+  const { data, error } = await supabase
+    .from('announcements')
+    .insert([item])
+    .select()
+    .single();
+
+  if (error) { console.error('Error saving announcement:', error); return null; }
+  return data;
+};
+
+export const updateAnnouncement = async (id: string, item: Partial<Announcement>): Promise<boolean> => {
+  const { error } = await supabase
+    .from('announcements')
+    .update(item)
+    .eq('id', id);
+
+  if (error) { console.error('Error updating announcement:', error); return false; }
+  return true;
+};
+
+export const deleteAnnouncement = async (id: string): Promise<boolean> => {
+  const { error } = await supabase
+    .from('announcements')
+    .delete()
+    .eq('id', id);
+
+  if (error) { console.error('Error deleting announcement:', error); return false; }
+  return true;
+};

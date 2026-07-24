@@ -16,6 +16,7 @@ import { AdminOrganization } from './pages/admin/AdminOrganization';
 import { AdminStats } from './pages/admin/AdminStats';
 import { AdminUMKM } from './pages/admin/AdminUMKM';
 import { AdminAttractions } from './pages/admin/AdminAttractions';
+import { AdminAnnouncements } from './pages/admin/AdminAnnouncements';
 import { ProtectedRoute } from './components/ProtectedRoute';
 
 export const router = createBrowserRouter([
@@ -49,7 +50,8 @@ export const router = createBrowserRouter([
           { path: 'stats', Component: AdminStats },
           { path: 'news', Component: AdminNews },
           { path: 'umkm', Component: AdminUMKM },
-          { path: 'attractions', Component: AdminAttractions }
+          { path: 'attractions', Component: AdminAttractions },
+          { path: 'announcements', Component: AdminAnnouncements },
         ]
       }
     ]

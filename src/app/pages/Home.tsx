@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+import { AnnouncementSection } from '../components/AnnouncementSection';
 import { 
   Users, 
   Home as HomeIcon, 
@@ -210,6 +211,8 @@ export function Home() {
             </Card>
           </div>
         </section>
+
+        <AnnouncementSection />
 
         {/* Latest News */}
         <section className="mb-16">

@@ -1,6 +1,6 @@
 import { Link, Outlet, useNavigate, useLocation } from 'react-router';
 import { Button } from '../../components/ui/button';
-import { Home, LayoutDashboard, Newspaper, AlertTriangle, LogOut, Menu, X, FileText, Users2, BarChart3, Briefcase, MapPin } from 'lucide-react';
+import { Home, LayoutDashboard, Newspaper, AlertTriangle, LogOut, Menu, X, FileText, Users2, BarChart3, Briefcase, MapPin, Bell } from 'lucide-react';
 import { logout, getCurrentUser } from '../../lib/auth';
 import { useState, useEffect } from 'react';
 import { toast } from 'sonner';
@@ -45,6 +45,7 @@ export function AdminLayout() {
     { name: 'Data Kependudukan', path: '/admin/stats', icon: BarChart3 },
     { name: 'Kelola Berita', path: '/admin/news', icon: Newspaper },
     { name: 'Kelola UMKM', path: '/admin/umkm', icon: Briefcase },
+    { name: 'Pengumuman', path: '/admin/announcements', icon: Bell }
   ];
 
   if (!user) return null;
